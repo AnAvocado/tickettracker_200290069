@@ -10,8 +10,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
-
+        //LOG IN
+        button_login_login.setOnClickListener {
+            val email = edittext_email_login.text.toString()
+            val password = edittext_password_login.text.toString()
+        }
+        //go to signup page
         textview_signup_login.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
