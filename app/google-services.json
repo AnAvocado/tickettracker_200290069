@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "834928303550",
+    "firebase_url": "https://ticketracker-eb40d.firebaseio.com",
+    "project_id": "ticketracker-eb40d",
+    "storage_bucket": "ticketracker-eb40d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834928303550:android:429af0b37f92e22967adef",
+        "android_client_info": {
+          "package_name": "com.example.tickettracker_200290069"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834928303550-ra1h6f4nobd48bm3a4i9ol0sbs4hamep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA9-j0Wgb8wLOojBmIyjIiGOZrvYL5GcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834928303550-ra1h6f4nobd48bm3a4i9ol0sbs4hamep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
