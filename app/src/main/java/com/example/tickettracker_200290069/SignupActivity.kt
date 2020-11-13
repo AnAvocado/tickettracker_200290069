@@ -31,12 +31,19 @@ class SignupActivity : AppCompatActivity() {
             if (password.length < 6){
                 val t = Toast.makeText(applicationContext, "Password needs to be 6 or more characters", Toast.LENGTH_LONG)
                 t.show()
-            }else{
                 return@setOnClickListener
             }
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
-                    if (!it.isSuccessful) return@addOnCompleteListener
+                    if (!it.isSuccessful) {
+                        val t = Toast.makeText(
+                            applicationContext,
+                            "Something went wrong!",
+                            Toast.LENGTH_SHORT
+                        )
+                        t.show()
+                        return@addOnCompleteListener
+                    }
                     else if (it.isSuccessful) {
                         val t = Toast.makeText(
                             applicationContext,
@@ -44,6 +51,8 @@ class SignupActivity : AppCompatActivity() {
                             Toast.LENGTH_SHORT
                         )
                         t.show()
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
                         return@addOnCompleteListener
                     }
                 }
