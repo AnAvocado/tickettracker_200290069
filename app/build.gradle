@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.tickettracker_200290069"
+        applicationId "com.nivium.tickettracker_200290069"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tickettracker_200290069">
+    package="com.nivium.tickettracker_200290069">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,20 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".ProjectListActivity" />
-        <activity android:name=".CreateProjectActivity" />
-        <activity android:name=".JoinProjectActivity" />
-        <activity android:name=".ResetActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity">
+        <activity android:name="com.nivium.tickettracker_200290069.SettingsActivity"></activity>
+        <activity android:name="com.nivium.tickettracker_200290069.ProjectListActivity" />
+        <activity android:name="com.nivium.tickettracker_200290069.CreateProjectActivity" />
+        <activity android:name="com.nivium.tickettracker_200290069.JoinProjectActivity" />
+        <activity android:name="com.nivium.tickettracker_200290069.ResetActivity" />
+        <activity android:name="com.nivium.tickettracker_200290069.LoginActivity" />
+        <activity android:name="com.nivium.tickettracker_200290069.SignupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.nivium.tickettracker_200290069.MainActivity">
         </activity>
 
         <meta-data

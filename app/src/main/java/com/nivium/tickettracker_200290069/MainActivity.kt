@@ -1,4 +1,4 @@
-package com.example.tickettracker_200290069
+package com.nivium.tickettracker_200290069
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

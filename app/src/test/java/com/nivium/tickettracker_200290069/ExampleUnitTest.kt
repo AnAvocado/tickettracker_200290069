@@ -1,4 +1,4 @@
-package com.example.tickettracker_200290069
+package com.nivium.tickettracker_200290069
 
 import org.junit.Test
 

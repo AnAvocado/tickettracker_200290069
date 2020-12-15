@@ -1,4 +1,4 @@
-package com.example.tickettracker_200290069
+package com.nivium.tickettracker_200290069
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
