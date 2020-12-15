@@ -21,10 +21,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             Log.d("Test", "Is this working?")
         }
-        button_join_project.setOnClickListener {
-            val intent = Intent(this, JoinProjectActivity::class.java)
-            startActivity(intent)
-        }
+
         button_view_projects.setOnClickListener {
             val intent = Intent(this, ProjectListActivity::class.java)
             startActivity(intent)

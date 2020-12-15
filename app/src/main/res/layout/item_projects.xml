@@ -2,8 +2,8 @@
 <android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/item_cell"
     android:layout_width="match_parent"
-    android:layout_height="75dp"
-    android:background="@android:color/holo_blue_light"
+    android:layout_height="150dp"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <TextView
@@ -13,7 +13,15 @@
         android:layout_gravity="left"
         android:layout_weight=".8"
         android:text="TextView"
-        android:textColor="#FFEB3B" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/project_owner_name"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight=".8"
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/project_item_description"
@@ -22,5 +30,15 @@
         android:layout_gravity="left"
         android:layout_weight=".8"
         android:text="TextView"
-        android:textColor="#FF9800" />
+        android:textColor="#A81717"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/project_delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.8"
+        android:text="Delete"
+        android:textAlignment="center" />
+
 </android.widget.LinearLayout>

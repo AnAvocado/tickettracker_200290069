@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
         button_login_login.setOnClickListener {
             val t = Toast.makeText(
                 applicationContext,
-                "Logging you in - this may take up to 15 seconds.",
+                "Logging you in - this may take a few seconds.",
                 Toast.LENGTH_LONG
             )
             t.show()

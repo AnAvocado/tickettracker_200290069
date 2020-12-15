@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -33,11 +34,12 @@ class ProjectListActivity : AppCompatActivity() {
         val query = db.collection("projects").orderBy("project_name", Query.Direction.ASCENDING)
 
         //pass query results
-        val options = FirestoreRecyclerOptions.Builder<Project>().setQuery(query, Project::class.java).build()
+        val options =
+            FirestoreRecyclerOptions.Builder<Project>().setQuery(query, Project::class.java).build()
         adapter = ProjectAdapter(options)
         project_recycler_view.adapter = adapter
-    }
 
+    }
 
 
     override fun onStart() {
@@ -45,6 +47,7 @@ class ProjectListActivity : AppCompatActivity() {
         adapter!!.startListening()
 
     }
+
     override fun onStop() {
         super.onStop()
         if (adapter != null) {
@@ -54,15 +57,17 @@ class ProjectListActivity : AppCompatActivity() {
 
 
     //Create classes needed to bind data
-    private inner class ProjectViewHolder internal constructor(private val view: View) : RecyclerView.ViewHolder(view){
+    private inner class ProjectViewHolder internal constructor(private val view: View) :
+        RecyclerView.ViewHolder(view) {
 
     }
 
     private inner class ProjectAdapter internal constructor(options: FirestoreRecyclerOptions<Project>) :
-            FirestoreRecyclerAdapter<Project, ProjectViewHolder>(options) {
+        FirestoreRecyclerAdapter<Project, ProjectViewHolder>(options) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProjectViewHolder {
             //inflate item_projects.xml
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.item_projects, parent, false)
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.item_projects, parent, false)
             return ProjectViewHolder(view)
         }
 
@@ -70,7 +75,11 @@ class ProjectListActivity : AppCompatActivity() {
             //populate project name and desc into the matching widgets
             holder.itemView.project_item_name.text = model.project_name
             holder.itemView.project_item_description.text = model.project_description
+            holder.itemView.project_owner_name.text = model.project_owner
+
+
         }
+
 
     }
 }
